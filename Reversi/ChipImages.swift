@@ -28,6 +28,17 @@ final class ChipImages {
     private func chipWithLight(color: UIColor) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(ChipImages.size,true,0)
         let context = UIGraphicsGetCurrentContext()
+        var fillColor: UIColor
+        if let paternImage = UIImage(named:
+            Constants.cellBackgroundImage)
+        {
+            fillColor = UIColor(patternImage: paternImage)
+        } else {
+            fillColor = UIColor.greenColor()
+        }
+        CGContextSetFillColorWithColor(context, fillColor.CGColor)
+        CGContextAddRect(context, rect)
+        CGContextDrawPath(context, CGPathDrawingMode.Fill)
         let colorSpace = CGColorSpaceCreateDeviceRGB()
         var components: [CGFloat]
         let startColor: UIColor = (color == UIColor.whiteColor()) ?
@@ -48,10 +59,10 @@ final class ChipImages {
         components += [red,green,blue,alpha] // add end color
         let center = CGPoint(x: rect.midX, y: rect.midY)
         let lightPoint = CGPoint(x: center.x+(rect.width/10),
-            y: center.y+(rect.height/10))
+            y: center.y-(rect.height/10))
         let locations: [CGFloat] = [0.0,1.0]
         let gradient = CGGradientCreateWithColorComponents(colorSpace, components, locations, 2)
-        CGContextDrawRadialGradient(context, gradient, center, rect.width/2, lightPoint, 0, .DrawsBeforeStartLocation)
+        CGContextDrawRadialGradient(context, gradient, center, rect.width/2, lightPoint, 0, .DrawsAfterEndLocation)
         CGContextSetStrokeColorWithColor(context, startColor.CGColor)
         CGContextAddEllipseInRect(context, rect)
         CGContextDrawPath(context, CGPathDrawingMode.Stroke)

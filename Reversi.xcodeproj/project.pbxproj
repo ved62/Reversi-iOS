@@ -19,7 +19,8 @@
 		994DF2CD1C6E1F3E00929D82 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994DF2C71C6E1F3E00929D82 /* Constants.swift */; };
 		994DF2CE1C6E1F3E00929D82 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994DF2C81C6E1F3E00929D82 /* Move.swift */; };
 		994DF2D01C6E1FED00929D82 /* ChipImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994DF2CF1C6E1FED00929D82 /* ChipImages.swift */; };
-		994DF2D21C6E280800929D82 /* GameLogicUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994DF2D11C6E280800929D82 /* GameLogicUI.swift */; };
+		999860B71C6E6ADB0088E9DF /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999860B51C6E6ADB0088E9DF /* GameLogic.swift */; };
+		999860B81C6E6ADB0088E9DF /* GameLogicUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999860B61C6E6ADB0088E9DF /* GameLogicUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +38,8 @@
 		994DF2C71C6E1F3E00929D82 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		994DF2C81C6E1F3E00929D82 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 		994DF2CF1C6E1FED00929D82 /* ChipImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChipImages.swift; sourceTree = "<group>"; };
-		994DF2D11C6E280800929D82 /* GameLogicUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLogicUI.swift; sourceTree = "<group>"; };
+		999860B51C6E6ADB0088E9DF /* GameLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameLogic.swift; path = ../GameLogic.swift; sourceTree = "<group>"; };
+		999860B61C6E6ADB0088E9DF /* GameLogicUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameLogicUI.swift; path = ../GameLogicUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +74,9 @@
 			children = (
 				994DF2B11C6E1D7400929D82 /* AppDelegate.swift */,
 				994DF2B31C6E1D7400929D82 /* ViewController.swift */,
-				994DF2D11C6E280800929D82 /* GameLogicUI.swift */,
 				994DF2CF1C6E1FED00929D82 /* ChipImages.swift */,
+				999860B51C6E6ADB0088E9DF /* GameLogic.swift */,
+				999860B61C6E6ADB0088E9DF /* GameLogicUI.swift */,
 				994DF2B51C6E1D7400929D82 /* Main.storyboard */,
 				994DF2C31C6E1F3E00929D82 /* Board.swift */,
 				994DF2C41C6E1F3E00929D82 /* Player.swift */,
@@ -163,12 +166,13 @@
 				994DF2CB1C6E1F3E00929D82 /* GameModel.swift in Sources */,
 				994DF2CA1C6E1F3E00929D82 /* Player.swift in Sources */,
 				994DF2B41C6E1D7400929D82 /* ViewController.swift in Sources */,
+				999860B81C6E6ADB0088E9DF /* GameLogicUI.swift in Sources */,
 				994DF2B21C6E1D7400929D82 /* AppDelegate.swift in Sources */,
 				994DF2CE1C6E1F3E00929D82 /* Move.swift in Sources */,
 				994DF2D01C6E1FED00929D82 /* ChipImages.swift in Sources */,
 				994DF2CD1C6E1F3E00929D82 /* Constants.swift in Sources */,
 				994DF2CC1C6E1F3E00929D82 /* Common.swift in Sources */,
-				994DF2D21C6E280800929D82 /* GameLogicUI.swift in Sources */,
+				999860B71C6E6ADB0088E9DF /* GameLogic.swift in Sources */,
 				994DF2C91C6E1F3E00929D82 /* Board.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +329,7 @@
 				994DF2C21C6E1D7400929D82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
