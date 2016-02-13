@@ -1,6 +1,6 @@
 //
 //  GameLogic.swift
-//  Try6
+//  Reversi iOS
 //
 //  Created by Владислав Эдуардович Дембский on 04.02.16.
 //  Copyright © 2016 Vladislav Dembskiy. All rights reserved.
