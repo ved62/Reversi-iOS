@@ -77,7 +77,7 @@ final class GameLogic {
     private func aiMove() {
         let strategist = GKMinmaxStrategist()
         strategist.gameModel = gameModel
-        strategist.maxLookAheadDepth = 6
+        strategist.maxLookAheadDepth = 5
         let delay = 1.0
         let time = dispatch_time(DISPATCH_TIME_NOW,
             Int64(delay*Double(NSEC_PER_SEC)))
