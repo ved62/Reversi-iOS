@@ -10,7 +10,7 @@
 import SpriteKit
 
 final class GameLogicUI: SKScene {
-    private var gameLogic: GameLogic!
+    
     private var atlas: SKTextureAtlas!
 
     private var gearSprite: SKSpriteNode! // used for indication AI activity
@@ -20,22 +20,7 @@ final class GameLogicUI: SKScene {
         atlas = createAtlas()
         gearSprite = createAIIndicator()
         displayEmptyBoard()
-        gameLogic = GameLogic(scene: self)
-        gameLogic.setInitialBoard()
-    }
-
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        print("touchesBegan")
-        for touch in touches {
-            let location = touch.locationInNode(self)
-            if let node: SKSpriteNode = nodeAtPoint(location) as? SKSpriteNode {
-                if let num = Int(node.name!) {
-                    let row = num / 10
-                    let column = num % 10
-                    gameLogic.cellPressed(row,column)
-                }
-            } else {gameLogic.cellPressed(-1,-1)}
-        }
+        
     }
 
     func displayChip(color: CellType,row: Int,column: Int) {
